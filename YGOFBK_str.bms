@@ -1,0 +1,22 @@
+/* 
+Yu-Gi-Oh! The Falsebound Kingdom
+
+FYI all DSP tracks are dual-stereo.  Refer to the README file.
+*/
+
+endian big
+set intr string "START" # used for endless loop until "if" condition is met (EOF)
+get POINTER1 long
+do
+	get POINTER2 long
+	if POINTER2 = 0		# use arbitrary size so that we only read to the end of the file.
+		set SIZE long 0x1E6C60
+		log "grp.dsp" POINTER1 SIZE
+		cleanexit
+	else
+		set SIZE long POINTER2
+		math SIZE - POINTER1
+		log "grp.dsp" POINTER1 SIZE
+		set POINTER1 long POINTER2
+	endif
+while intr != "YU-GI-OH!"

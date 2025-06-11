@@ -1,0 +1,22 @@
+/*
+Yu-Gi-Oh! The Falsebound Kingdom (sfx)
+
+Please note that you need to use a txth file to rip each of the grp with vgmstream.
+*/
+
+endian big
+set intr string "START" # used for endless loop until "if" condition is met (EOF)
+get POINTER1 long
+do
+	get POINTER2 long 
+	if POINTER2 = 0		# use arbitrary size so that we only read to the end of the file.
+		set SIZE long 0x4B47C0	
+		log "grp*" POINTER1 SIZE
+		cleanexit
+	else
+		set SIZE long POINTER2
+		math SIZE - POINTER1
+		log "grp*" POINTER1 SIZE
+		set POINTER1 long POINTER2
+	endif
+while intr != "YU-GI-OH!"

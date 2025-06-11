@@ -1,0 +1,12 @@
+codec = NGC_DSP
+subsong_count = @0x04:BE
+
+subsong_spacing = 0x60
+base_offset = 0x20
+
+channels = 1
+num_samples = @0x00:BE
+sample_rate = @0x08:BE
+start_offset = ((@0x18:BE - 2) / 2) + 0x6000
+coef_offset = 0x1c
+coef_endianness = BE
