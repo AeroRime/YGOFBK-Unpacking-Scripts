@@ -2,9 +2,9 @@
 Repository for the bms extraction scripts for the .pac files in YGOFBK.
 
 ## How to use 
-1. You need to download quickbms to use the .bms scripts, which you can get here: https://aluigi.altervista.org/quickbms.htm
+1. You need to download QuickBMS to use the bms scripts, which you can get here: https://aluigi.altervista.org/quickbms.htm
 
-2. Use the .bms scripts to extract the DSP files from str.pac and the grp files from grp.pac.  Please note that you will have to output the same filenames since the generic archives don't have any filenames or paths, just the pointers before the sub-files.
+2. Use the bms scripts to extract the DSP files from str.pac and the grp files from grp.pac.  Please note that you will have to output the same filenames since the generic archives don't have any filenames or paths, just the pointers before the sub-files.
 
 3. Download vgmstream or Foobar2000 with the vgmstream component.  Please refer to one of the two sub-sections below for reference.
 
@@ -36,6 +36,6 @@ The grp(s) in Falsbound Kingdom are linked to specific monsters in-game.  Althou
 
 
 ## Special Thanks/Credits
-bnnm - https://github.com/bnnm (helped with creating the txth file)
+bnnm - https://github.com/bnnm (helped with creating the txth file for .grp format)
 
-aluigi - https://github.com/aluigi (code source)
+aluigi - https://github.com/aluigi (QuickBMS)
